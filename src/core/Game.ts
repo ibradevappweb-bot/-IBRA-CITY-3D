@@ -14,7 +14,7 @@ export class Game {
   private running = false;
 
   constructor(
-    private readonly container: HTMLElement,
+    container: HTMLElement,
     canvas: HTMLCanvasElement,
     quality: GraphicsQuality,
   ) {
