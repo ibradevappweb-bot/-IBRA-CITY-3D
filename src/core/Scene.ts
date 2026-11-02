@@ -57,18 +57,7 @@ export class GameScene {
     grid.position.y = 0.015;
     this.scene.add(grid);
 
-    const platform = new THREE.Mesh(
-      new THREE.BoxGeometry(5, 0.35, 5),
-      new THREE.MeshStandardMaterial({
-        color: "#15283a",
-        metalness: 0.35,
-        roughness: 0.55,
-      }),
-    );
-    platform.position.set(0, 0.18, 0);
-    platform.castShadow = true;
-    platform.receiveShadow = true;
-    this.scene.add(platform);
+    // The driving area stays flat and unobstructed; the old test platform was removed.
 
     const marker = new THREE.Mesh(
       new THREE.TorusGeometry(3.2, 0.035, 8, 96),
