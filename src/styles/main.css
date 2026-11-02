@@ -118,3 +118,10 @@ h1 span { color: transparent; -webkit-text-stroke: 1.5px rgba(133, 190, 237, .82
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+.drive-controls { position:absolute; inset:auto 18px max(22px,env(safe-area-inset-bottom)); display:flex; justify-content:space-between; align-items:end; pointer-events:none; }
+.drive-controls button { pointer-events:auto; min-width:62px; min-height:58px; border:1px solid rgba(255,255,255,.42); border-radius:14px; color:#fff; background:rgba(7,20,34,.72); backdrop-filter:blur(8px); font-size:12px; font-weight:800; touch-action:none; user-select:none; }
+.drive-steering,.drive-pedals { display:flex; gap:10px; }
+.drive-pedals button:last-child { background:rgba(20,125,205,.82); min-width:100px; }
+.drive-pedals button:first-child { min-width:76px; }
+@media (min-width:761px) { .drive-controls { opacity:.72; } }
