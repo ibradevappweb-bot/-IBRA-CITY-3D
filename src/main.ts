@@ -14,11 +14,15 @@ if (!(gameContainer instanceof HTMLElement) || !(canvas instanceof HTMLCanvasEle
   throw new Error("Impossible d'initialiser IBRA CITY 3D : conteneur ou canvas absent.");
 }
 
+// Keep explicitly typed references for use inside callbacks.
+const gameRoot: HTMLElement = gameContainer;
+const gameCanvas: HTMLCanvasElement = canvas;
+
 let selectedQuality: GraphicsQuality = getSavedGraphicsQuality();
 let game: Game | null = null;
 
 function createGame(): Game {
-  return new Game(gameContainer, canvas, selectedQuality);
+  return new Game(gameRoot, gameCanvas, selectedQuality);
 }
 
 const menu = new MainMenu(
