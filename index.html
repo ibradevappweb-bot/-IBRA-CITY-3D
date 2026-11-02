@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#080d18" />
+    <meta name="description" content="IBRA CITY 3D — jeu de conduite automobile en monde ouvert." />
+    <title>IBRA CITY 3D</title>
+  </head>
+  <body>
+    <div id="app">
+      <main class="shell">
+        <header class="topbar">
+          <a class="brand" href="/" aria-label="IBRA CITY 3D accueil">
+            <span class="brand-mark">I</span>
+            <span>IBRA <strong>CITY 3D</strong></span>
+          </a>
+          <span class="version-label">EARLY DEVELOPMENT</span>
+        </header>
+        <section class="hero" aria-labelledby="game-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> THE CITY IS YOURS</p>
+            <h1 id="game-title">DRIVE<br /><span>BEYOND.</span></h1>
+            <p class="hero-description">Explorez. Pilotez. Prenez le contrôle de la ville.</p>
+            <div class="menu-actions">
+              <button id="play-button" class="button button-primary" type="button">
+                <span class="button-icon">▶</span> JOUER
+              </button>
+              <button id="settings-button" class="button button-secondary" type="button">
+                PARAMÈTRES <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+            <p class="status-line"><span class="status-dot"></span> VERSION DE DÉVELOPPEMENT · MODE SOLO</p>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-glow"></div>
+            <div class="art-grid"></div>
+            <div class="art-car">
+              <div class="car-roof"></div>
+              <div class="car-body"></div>
+              <div class="car-window"></div>
+              <div class="car-wheel wheel-front"></div>
+              <div class="car-wheel wheel-back"></div>
+              <div class="car-light"></div>
+            </div>
+            <div class="art-caption"><span>01</span> CITY DRIVE CONCEPT</div>
+          </div>
+        </section>
+        <footer class="footer">
+          <span>IBRA CITY 3D</span>
+          <span>BUILT TO DRIVE · BUILT TO EXPLORE</span>
+        </footer>
+      </main>
+      <section id="settings-panel" class="settings-panel" aria-labelledby="settings-title" hidden>
+        <div class="settings-card">
+          <div class="panel-heading">
+            <div><p class="eyebrow">PERSONNALISATION</p><h2 id="settings-title">Graphismes</h2></div>
+            <button id="close-settings" class="icon-button" type="button" aria-label="Fermer">✕</button>
+          </div>
+          <p class="settings-intro">Choisissez un profil adapté à votre appareil. Vous pourrez le modifier à tout moment.</p>
+          <div class="quality-options" role="group" aria-label="Profil graphique">
+            <button class="quality-option" data-quality="low" type="button"><strong>Économique</strong><span>Fluidité prioritaire</span></button>
+            <button class="quality-option" data-quality="balanced" type="button"><strong>Équilibré</strong><span>Qualité et fluidité</span></button>
+            <button class="quality-option" data-quality="high" type="button"><strong>Qualité</strong><span>Effets renforcés</span></button>
+          </div>
+          <p id="settings-feedback" class="settings-feedback" role="status"></p>
+        </div>
+      </section>
+      <section id="game-screen" class="game-screen" hidden aria-label="Scène de jeu 3D">
+        <canvas id="game-canvas"></canvas>
+        <div class="game-hud">
+          <div><span class="hud-kicker">IBRA CITY 3D</span><strong>ZONE DE TEST</strong></div>
+          <button id="exit-game" class="button button-secondary hud-exit" type="button">RETOUR AU MENU</button>
+        </div>
+        <div class="scene-label">ENVIRONNEMENT DE TEST · VÉHICULE À VENIR</div>
+      </section>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
